@@ -7,6 +7,12 @@
     <title>Tiigsi Restuarant</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    #navs{
+        display: block;
+    }
+</style>
 </head>
 <body>
     
@@ -16,13 +22,13 @@
             <h2 class="text-purple-300 text-opacity-75 text-lg md:text-2xl">Tiigsi restuarant</h2>
         </div>
 
-        <nav class="mt-20 ml-4  hidden md:block md:mt-4"id="navs">
+        <nav class="mt-20 ml-4  md:mt-4"id="navs">
             
             <ul class="py-4 leading-9 md:leading-9">
-                <li class="md:inline"><a class="p-2 md:p-4 text-blue-300 font-sans text-lg hover:text-red-300 transition" href="#">Home</a></li>
-                <li class="md:inline"><a class="p-2 md:p-4 text-blue-300 font-sans text-lg hover:text-red-300 transition" href="#">About</a></li>
-                <li class="md:inline"><a class="p-2 md:p-4 text-blue-300 font-sans text-lg hover:text-red-300 transition"href="#">Services</a></li>
-                <li class="md:inline"><a class="p-2 md:p-4 text-blue-300 font-sans text-lg hover:text-red-300 transition" href="#">Order</a></li>
+                <li class="md:inline"><a class="p-2 md:p-4 text-black font-sans text-lg hover:text-red-300 transition" href="#">Home</a></li>
+                <li class="md:inline"><a class="p-2 md:p-4 text-black font-sans text-lg hover:text-red-300 transition" href="#">About</a></li>
+                <li class="md:inline"><a class="p-2 md:p-4 text-black font-sans text-lg hover:text-red-300 transition"href="#">Services</a></li>
+                <li class="md:inline"><a class="p-2 md:p-4 text-black font-sans text-lg hover:text-red-300 transition" href="#">Order</a></li>
 
             </ul>
            
@@ -438,7 +444,11 @@
         
     
          menuBar.addEventListener('click', () => {
-              nav.style.display = "block";
+              if(nav.style.display === "block"){
+                nav.style.display = 'none'
+              }else{
+                nav.style.display = 'block'
+              }
              
             
              
